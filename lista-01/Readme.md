@@ -39,3 +39,9 @@ public static void main(String[] args){
 
 ### Fluxo de trabalho usando ramos
 
+```Shell
+git checkout master
+git branch
+git merge decisao
+git branch -d decisao
+```
