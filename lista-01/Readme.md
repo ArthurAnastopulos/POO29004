@@ -60,6 +60,20 @@ public static void main(String[] args) {
 
 ### Interação com o usuário
 
+```Java
+import java.util.Scanner;
+
+public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+    System.out.print("Entre com a String: ");
+    String s = teclado.nextLine(); // lendo cadeia de caracteres
+    System.out.println("String: " + s);
+    System.out.print("Informe um número inteiro: ");
+    int i = teclado.nextInt(); // lendo inteiro
+    System.out.print("Inteiro: " + i);  
+}
+```
+
 ## Comandos git
 
 ### Fluxo de trabalho usando ramos
