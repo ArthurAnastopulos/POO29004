@@ -12,9 +12,6 @@ public class Exercicio02 {
         int arrLength = nums.length;
         int aux = 0;
 
-        for(int i = 0; i < arrLength; i++) System.out.print(nums[i] + " ");
-        System.out.println("\n");
-
         for(int i=0; i < arrLength; i++) {
             for(int j=1; j < (arrLength - i); j++) {
                 if(nums[j-1] > nums[j]) {
