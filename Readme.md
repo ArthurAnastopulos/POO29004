@@ -9,3 +9,5 @@
 * [Lista 01](lista-01) - Sistema de Controle de Versão
 
 * [Lista 02](lista-02) - Introdução a linguagem Java
+
+* [Lista 03](lista-03) - Modelagem de Classes
