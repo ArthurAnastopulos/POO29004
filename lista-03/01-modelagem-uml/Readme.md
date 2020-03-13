@@ -28,4 +28,4 @@
 
 ![UML Datagrama](Datagrama.png)
 
-> Um datagrama consiste de um cabeçalho e os campos de dados que transportam o IP. O campo possui versão do protocolo; IHL ,Internet Header Length; o tipo do serviço; protocolos e endereços escritos em bytes, e o tamanho total do campo (*int*).
+> Um datagrama consiste de um cabeçalho e os campos de dados que transportam o IP. O campo possui versão do protocolo; IHL,Internet Header Length; o tipo do serviço; tamanho total; identificação; flags; offset; tempo de vida; protocolo; checksum; endereços de destino e scource; opção e padding.

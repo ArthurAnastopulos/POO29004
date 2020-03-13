@@ -1,69 +1,55 @@
-import java.util.Queue;
-
 public class Switch {
-    private String[] pacotes;
-    private String endereco;
-    private Queue<String> store;
-    private int porta;
+    private String[][] portas;
+    private boolean energia;
 
-    public Switch(int quantidade) {
-        this.pacotes = new String[quantidade];
-        this.endereco = "";
-        this.porta = 0;
+    public Switch() {
+        this.portas = new String[24][2];
+        this.energia = false;
     }
 
-    public Switch(String[] pacotes, String endereco, int porta) {
-        this.pacotes = pacotes;
-        this.endereco = endereco;
-        this.porta = porta;
+    public Switch(int lin) {
+        this.portas = new String[lin][2];
+        this.energia = false;
     }
 
-    public String[] getPacotes() {
-        return pacotes;
+    public Switch(int lin, boolean energia) {
+        this.portas = new String[lin][2];
+        this.energia = energia;
     }
 
-    public void setPacotes(String[] pacotes) {
-        this.pacotes = pacotes;
+    public String[][] getPortas() {
+        return portas;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public void setPortas(int lin) {
+        this.portas = new String[lin][2];
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setPortas(String[][] portas) {
+        this.portas = portas;
     }
 
-    public Queue<String> getStore() {
-        return store;
+    public boolean isEnergia() {
+        return energia;
     }
 
-    public int getPorta() {
-        return porta;
+    public void setEnergia(boolean energia) {
+        this.energia = energia;
     }
 
-    public void setPorta(int porta) {
-        this.porta = porta;
+    public void conectar(String porta, String endereco) {
+        int aux = Integer.parseInt(porta);
+        this.portas[aux][2] = endereco;
     }
 
-    public void store() {
-        for(int i = 0; i < this.pacotes.length; i++) {
-            this.store.add(this.pacotes[i]);
+    public void desconectar(String porta, String endereco) {
+        int aux = Integer.parseInt(porta);
+        this.portas[aux][2] = "";
+    }
+
+    public void desconectar() {
+        for(int i = 0; i < this.portas.length;i++) {
+            this.portas[i][2] = "";
         }
-    }
-
-    public void store(String pacote) {
-        this.store.add(pacote);
-    }
-
-    public String[] foward(String destino) {
-        if(!destino.equals(this.endereco)) {
-            String[] aux = new String[store.size()];
-            for(int i = 0; i < store.size(); i++) {
-                aux[i] = store.poll();
-            }
-            return aux;
-        }
-
     }
 }
