@@ -11,3 +11,5 @@
 * [Lista 02](lista-02) - Introdução a linguagem Java
 
 * [Lista 03](lista-03) - Modelagem de Classes
+
+* [Lista 04](lista-04) - Construtor, modificadores de acesso e palavras reservadas
