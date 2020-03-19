@@ -12,3 +12,12 @@ Total de números pares: 6
 Total de números impares: 5
 Total de números primo: 6
 ```
+- Lista 03 - 13/03/2020
+    - ok
+- Lista 04 - 18/03/2020
+    - Exercício 01
+        - Método `setWidth` não está correto
+        - Métodos desenhar compartilham lógica. Logo, será possível refatorar isso para evitar duplicidade.
+    - Exercício 02
+         - Está fazendo uso de literais espalhas pelo código
+
