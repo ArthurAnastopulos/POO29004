@@ -13,3 +13,5 @@
 * [Lista 03](lista-03) - Modelagem de Classes
 
 * [Lista 04](lista-04) - Construtor, modificadores de acesso e palavras reservadas
+
+* [Lista 05](lista-05) - Modelagem de classes com associação 
