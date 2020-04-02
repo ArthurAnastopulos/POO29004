@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Agenda {
     private ArrayList<Pessoa> contatos;
@@ -19,13 +20,15 @@ public class Agenda {
 
     public boolean removePessoa(String n, String s) {
         try {
-            for (Pessoa p : this.contatos) {
+            Iterator<Pessoa> iteracao = contatos.iterator();
+            while(iteracao.hasNext()){
+                Pessoa p = iteracao.next();
                 String aux = p.getNome() + " " + p.getSobrenome();
-                if(aux.equalsIgnoreCase(n + " " + s)) {
-                    return this.contatos.remove(p);
+                if (aux.equals(n + " " + s)){
+                    iteracao.remove();
+                    return true;
                 }
             }
-
         } catch (Exception e) {
             return false;
         }
