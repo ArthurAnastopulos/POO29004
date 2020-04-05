@@ -2,6 +2,9 @@
 # Created by https://www.gitignore.io/api/java,linux,macos,gradle,windows,intellij
 # Edit at https://www.gitignore.io/?templates=java,linux,macos,gradle,windows,intellij
 
+### JAR Files ###
+!libs/*.jar
+
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
