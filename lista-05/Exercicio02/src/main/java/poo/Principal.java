@@ -23,16 +23,16 @@ public class Principal {
                         else System.out.println("Erro.");
                         break;
                     case 2:
-                        System.out.println("Cima ou Baixo: ");
+                        System.out.println("Altitude(Digite 'z'): ");
                         String d1 = teclado.nextLine();
                         System.out.println("Valor: ");
                         String v1 = teclado.nextLine();
                         double n = Double.parseDouble(v1);
-                        if (drone.altitude(d1, n)) System.out.println("Sucesso.");
+                        if (drone.mover(d1, n)) System.out.println("Sucesso.");
                         else System.out.println("Erro.");
                         break;
                     case 3:
-                        System.out.println("Direção: ");
+                        System.out.println("Mover(Digite 'x' ou 'y'): ");
                         String d2 = teclado.nextLine();
                         System.out.println("Valor: ");
                         String v2 = teclado.nextLine();

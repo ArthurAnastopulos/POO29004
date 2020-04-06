@@ -1,5 +1,8 @@
 package poo;
 
+import com.grum.geocalc.Coordinate;
+import com.grum.geocalc.Point;
+
 import java.util.ArrayList;
 
 public class Drone {
@@ -14,14 +17,6 @@ public class Drone {
     private final int ROTORES = 4;
     private final int SQRT = 2;
     private final int AUTO = 10;
-
-    private final String UP = "subir";
-    private final String DOWN = "descer";
-    private final String CAM = "camera";
-    private final String FRONT = "frente";
-    private final String BACK = "tras";
-    private final String RIGHT = "direita";
-    private final String LEFT = "esquerda";
 
     public Drone() {
         this.rotores = new ArrayList<Rotor>();
@@ -51,26 +46,23 @@ public class Drone {
         }
     }
 
-    public boolean altitude(String move, double valor) {
-        if(this.bateria > AUTO) {
-            if (this.coordenadas.altitude(move, valor)) {
-                this.consomeBateria(valor);
-                return true;
-            } else return false;
-        } else {
-            return this.origem();
-        }
-    }
-
     public boolean mover(String move, double valor) {
-        if(this.bateria > AUTO) {
-            if (this.coordenadas.mover(move, valor)) {
+        if(this.coordenadas.alterar(move,valor)){
+            if(move.equalsIgnoreCase("x")) {
+                Coordinate aux2 = this.coordenadas.getLat();
                 this.consomeBateria(valor);
                 return true;
-            } else return false;
-        } else {
-            return this.origem();
+            } else if(move.equalsIgnoreCase("y")) {
+                Coordinate aux2 = this.coordenadas.getLng();
+                this.consomeBateria(valor);
+                return true;
+            } else if (move.equalsIgnoreCase("z")) {
+                Coordinate aux2 = this.coordenadas.getAlt();
+                this.consomeBateria(valor);
+                return true;
+            }
         }
+        return false;
     }
 
     public String getPosicao() {
@@ -101,14 +93,14 @@ public class Drone {
 
     public boolean vooAutonomo() {
         for (String str : this.plano) {
-            if (str.equalsIgnoreCase(FRONT) || str.equalsIgnoreCase(BACK) || str.equalsIgnoreCase(LEFT)
-                    || str.equalsIgnoreCase(RIGHT)) {
-                            this.coordenadas.mover(str, AUTO);
-            } else if (str.equalsIgnoreCase(UP)|| str.equalsIgnoreCase(DOWN)) {
-               this.coordenadas.altitude(str, AUTO);
-            }  else if (str.equalsIgnoreCase(CAM)) {
-                this.captura();
-            } else return false;
+            String[] aux = str.split(" ");
+            if(aux.length < 3)return false;
+            Double lat = Double.parseDouble(aux[0]);
+            Double lng = Double.parseDouble(aux[1]);
+            Double alt = Double.parseDouble(aux[2]);
+            if(! this.mover("x", lat))return false;
+            if(! this.mover("y", lng))return false;
+            if(! this.mover("z", alt))return false;
         }
         return true;
     }
