@@ -14,4 +14,6 @@
 
 * [Lista 04](lista-04) - Construtor, modificadores de acesso e palavras reservadas
 
-* [Lista 05](lista-05) - Modelagem de classes com associação 
+* [Lista 05](lista-05) - Modelagem de classes com associação
+
+* [Lista 06](lista-06) - Coleções Java, Herança e Testes de unidade
