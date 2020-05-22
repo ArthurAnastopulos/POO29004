@@ -1,21 +1,21 @@
 package poo;
 
-public class Circulo extends Ponto {
-    private int raio;
-    private final int EXP = 2;
+public class Circulo extends FormaGeometricas{
+   private Ponto centro;
+   private double raio;
 
-    public Circulo(int coord_x, int coord_y, int raio) {
-        super(coord_x, coord_y);
-        this.raio = raio;
-    }
+   public Circulo(Ponto centro, double raio) {
+      this.centro = centro;
+      this.raio = raio;
+   }
 
-    public int getArea() {
-        return (int) ((Math.PI) * (Math.pow(raio, EXP)));
-    }
+   public void desenhar() {
+      System.out.print("Circulo -> Centro ");
+      this.centro.desenhar();
+      System.out.println("Circulo -> Com Raio de " + this.raio + ".");
+   }
 
-
-    public void desenhar() {
-        System.out.println("Circulo com origem em " + "[" + this.coord_x + "," + this.coord_y
-                + "]" + " e Raio " + this.raio + " desenhado.");
-    }
+   public double getArea() {
+      return Math.PI * Math.sqrt(raio);
+   }
 }
