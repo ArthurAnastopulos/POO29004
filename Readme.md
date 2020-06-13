@@ -17,3 +17,5 @@
 * [Lista 05](lista-05) - Modelagem de classes com associação
 
 * [Lista 06](lista-06) - Coleções Java, Herança e Testes de unidade
+
+* [Lista 07](lista-07) - Polimorfismo, Enum e Tipos genéricos
