@@ -1,8 +1,10 @@
-# Resolução das listas de exercícios
+# POO29004 - Programação Orientada a Objetos. 
 
-## Arthur Anastopulos dos Santos
+> Ementa: Introdução ao paradigma da orientação a objetos: Classes, objeto, associações entre classes, herança. Introdução à linguagem de modelagem unificada (UML): Diagramas de caso de uso, classes, sequência. Introdução a linguagem de programação Java: Tipos de dados primitivos, estruturas de controle, vetores; concepção de projeto orientado a objetos, herança, polimorfismo; interfaces gráficas amigáveis.
 
-> Esse repositório contém a resolução de todas as listas de exercícios da disciplina de Programação Orientada a Objetos(POO29004)
+> Esse repositório contém a resolução de todas as listas de exercícios e o material usado em aula da disciplina de Programação Orientada a Objetos(POO29004)
+
+* [Slides](slides) - Slides Utilizados em Aula.
 
 ## Listas
 
